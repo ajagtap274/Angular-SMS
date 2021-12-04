@@ -1,0 +1,54 @@
+<h1>Add Student Academic Data</h1>
+
+
+<form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+    <div class="row" >
+        <div class="col" class="col-xs-12 col-sm-12 col-md-6">
+            <h6>Roll No.</h6>
+          <input type="number" class="form-control" placeholder="Enter Roll No." name="rollNo" [(ngModel)]="rollNo">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+          <h6>First Name</h6>
+        <input type="text" class="form-control" placeholder="First name" name="fname"[(ngModel)]="fname">
+      </div>
+      <div class="col">
+        <h6>Last Name</h6>
+        <input type="text" class="form-control" placeholder="Last name" name="lname" [(ngModel)]="lname">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <h6>Maths</h6>
+          <input type="number" class="form-control" placeholder="Marks Out of 100" name="maths"[(ngModel)]="maths">
+        </div>
+        <div class="col">
+          <h6>Science</h6>
+          <input type="number" class="form-control" placeholder="Marks Out of 100" name="sci"[(ngModel)]="sci">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col" class="col-xs-12 col-sm-12 col-md-6">
+            <h6>English</h6>
+          <input type="number" class="form-control" placeholder="Marks Out of 100" name="eng"[(ngModel)]="eng">
+        </div>
+        <!-- <div class="col" >
+          <h6>Percentage</h6>
+        <input type="number" class="form-control" placeholder="Percentage" name="per"[(ngModel)]="percentage">
+      </div> -->
+      </div>
+      <br>
+      <div class="row">
+        <div class="col" class="col-xs-12 col-sm-12 col-md-6">
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+      </div>
+      
+  </form>
+
+
+

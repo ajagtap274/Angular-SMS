@@ -1,0 +1,45 @@
+<h1>My Todo's</h1>
+
+<div class="container">
+ <table class="table">
+
+        <thead>
+            <tr>
+                <th>RollNo</th>
+                <th>fname</th>
+                <th>lname</th>
+                <th>maths</th>
+                <th>sci</th>
+                <th>eng</th>
+                <th>percentage</th>
+                <th>fail</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--for(Todo todo:todos)  -->
+            <tr *ngFor="let student of studs">
+                <td>{{student.rollNo}}</td>
+                <td>{{student.fname}}</td>
+                <td>{{student.lname}}</td>
+                <td>{{student.maths}}</td>
+                <td>{{student.sci}}</td>
+                <td>{{student.eng}}</td>
+                <td>{{student.percentage}}</td>
+                <td>{{student.fail}}</td>
+                <td *ngIf="auths.isUserLoggedIn()">
+                    <button class="btn btn-success">Update</button>
+                </td>
+                <td *ngIf="auths.isUserLoggedIn()">
+                    <button class="btn btn-warning">Delete</button>
+                </td>
+                <td *ngIf="auths.isUserLoggedIn()">
+                    <button class="btn btn-primary" (click)=toStudentComponent(student.rollNo)>View</button>
+                </td>
+                
+            </tr>
+        </tbody>
+   
+</table>     
+</div>

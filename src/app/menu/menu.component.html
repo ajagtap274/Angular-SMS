@@ -1,0 +1,27 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div>
+            <a href="https://www.google.com" class="navbar-brand">Google</a>
+        </div>
+
+        <ul class="navbar-nav">
+            <li><a *ngIf="auths.isUserLoggedIn()"     routerLink="/welcome" class="nav-link">Home</a></li>
+            <li><a *ngIf="auths.isUserLoggedIn()" routerLink="/todos" class="nav-link">Todos</a></li>
+            <li><a *ngIf="auths.isUserLoggedIn()" routerLink="/students" class="nav-link">Students</a></li>
+            <li><a *ngIf="auths.isUserLoggedIn()" routerLink="/addstud" class="nav-link">Add Student</a></li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li>
+                <a *ngIf="! auths.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a>
+            </li>
+            <li><a *ngIf="auths.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- 
+href reloads the page every time we clicked on it. While routerLink does not reload the page.
+It is used in Single Page Apllications. 
+-->
